@@ -1,0 +1,76 @@
+.section {
+padding: 150px 0;
+}
+.section-header {
+margin: 0 auto;
+margin-bottom: 50px;
+
+max-width: 800px;
+width: 100%;
+text-align: center;
+}
+.section-header-groups{
+max-width: 580px;
+}
+.section-title {
+ color:var(--accent);
+ font-family: var(--font-accent);
+ font-weight: 700;
+ font-size: clamp(2.25rem, 0.886rem + 6.82vw, 6rem); /* 96px - 36px https://min-max-calculator.9elements.com/?48,96,320,1200   */
+ letter-spacing: 0.02em;/* letter-spacing: 0.08em =  letter-spacing: 7.5px */
+}
+.section-header p {
+ font-size: clamp(0.688rem, 0.574rem + 0.57vw, 1rem); /* font-size: 16px->11px;  */
+ line-height: 2; /*  font-size*2=32px можно писать просто 2 */
+}
+.section-trainers-grid{
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 35px 30px;
+}
+.section-groups-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 150px 32px;
+}
+@media (max-width: 1200px){
+.section-groups-grid {
+grid-template-columns: repeat(3, 1fr);
+gap: 80px 32px;
+}
+.section-trainers-grid {
+grid-template-columns: repeat(3, 1fr);
+gap: 80px 32px;
+}
+}
+@media (max-width: 800px) {
+.section{
+padding: 100px 0;;
+}
+.section-trainers-grid{
+grid-template-columns: repeat(2, 1fr);
+gap: 25px 20px;
+}
+.section-groups-grid {
+grid-template-columns: repeat(2, 1fr);
+gap: 60px 25px;
+}
+}
+@media (max-width: 600px) {
+.section{
+padding: 80px 0;;
+}
+
+.section-groups-grid {
+grid-template-columns: repeat(1, 1fr);
+gap: 60px 25px;
+}
+}
+@media (max-width: 380px){
+.section-groups-grid {
+grid-template-columns: repeat(1, 1fr);
+gap: 60px 20px;
+justify-items: center;
+}
+}
+
